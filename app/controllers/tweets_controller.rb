@@ -1,27 +1,13 @@
 class TweetsController < ApplicationController
   before_action :authenticate_user!
   def index
-    @tweets = Tweet.all
-    if params[:tag_ids]
-      @tweets = []
-      params[:tag_ids].each do |key, value|      
-        @tweets += Tag.find_by(name: key).tweets if value == "1"
-      end
-      @tweets.uniq!
-    end
-
-    if params[:tag_ids]
-      @tweets = []
-      params[:tag_ids].each do |key, value|
-        if value == "1"
-          tag_tweets = Tag.find_by(name: key).tweets
-          @tweets = @tweets.empty? ? tag_tweets : @tweets & tag_tweets
-        end
-      end
-    end
-
-    if params[:tag]
-      Tag.create(name: params[:tag])
+    if params[:search] == nil
+      @tweets= Tweet.all
+    elsif params[:search] == ''
+      @tweets= Tweet.all
+    else
+      #部分検索
+      @tweets = Tweet.where("body LIKE ? ",'%' + params[:search] + '%')
     end
   end
 

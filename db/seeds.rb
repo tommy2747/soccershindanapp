@@ -27,13 +27,4 @@ Diagnosis.create([
   { result_key: "く", result_detail: "あなたにオススメなのはブライトンです！" }
 ])
 
-Diagnosis.create([
-  { question1: "冒険的思考", question2: "歴史的文化", question3: "アウトドア派", result: "マンチェスターユナイテッド" },
-  { question1: "冒険的思考", question2: "歴史的文化", question3: "インドア派", result: "チェルシー" },
-  { question1: "冒険的思考", question2: "近代的文化", question3: "アウトドア派", result: "トッテナム" },
-  { question1: "冒険的思考", question2: "近代的文化", question3: "インドア派", result: "ニューカッスル" },
-  { question1: "堅実的思考", question2: "歴史的文化", question3: "アウトドア派", result: "リヴァプール" },
-  { question1: "堅実的思考", question2: "歴史的文化", question3: "インドア派", result: "アーセナル" },
-  { question1: "堅実的思考", question2: "近代的文化", question3: "アウトドア派", result: "マンチェスターシティ" },
-  { question1: "堅実的思考", question2: "近代的文化", question3: "インドア派", result: "ブライトン" }
-])
+

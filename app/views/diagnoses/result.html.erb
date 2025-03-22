@@ -1,8 +1,16 @@
-<div id="diagnosis">
-  <% if @diagnosis.present? %>
-    <h2>診断結果</h2>
-    <p><%= @diagnosis.result_detail %></p>
-  <% else %>
-    <p>診断結果が見つかりません。</p>
-  <% end %>
+<%= stylesheet_link_tag 'diagnoses', media: "all" %>
+<div class="questionback">
+  <div id="diagnosis">
+    <% if @diagnosis.present? %>
+      <h2>診断結果</h2>
+      <div class="answer">
+        <p><%= @diagnosis.result_detail %></p>
+        <div class="answer-image">
+          <%= image_tag("diagnosis/#{@diagnosis.image}", width: 300) if @diagnosis.image.present? %>
+        </div>
+      </div>
+    <% else %>
+      <p>診断結果が見つかりません。</p>
+    <% end %>
+  </div>
 </div>

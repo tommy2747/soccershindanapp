@@ -1,1 +1,17 @@
-<%= link_to "診断する", diagnoses_question1_path %>
+<!DOCTYPE html> <!--　この文章がHTML文章であることを伝える要素です。-->
+<html lang="ja"><!--言語の指定-->
+    <head><!--ページに表示されない情報(サイトの裏側の設定)-->
+        <meta charset="utf-8">
+        <title></title><!--ブラウザのタブのタイトルを指定-->
+        <%= stylesheet_link_tag 'diagnoses', media: "all" %>
+    </head>
+    <body>
+        <section id="first-block">
+            <div class="title-container">
+                <h1>山田 太郎</h1>
+                <h3>~ Geeksalon Webコース1期生 ~</h3>
+            </div>
+        </section>
+        <%= link_to "診断する", diagnoses_question1_path %>
+    <body>
+<html>

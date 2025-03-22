@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   
-  a
+  resources :users, only: [:show]
   
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
   # Can be used by load balancers and uptime monitors to verify that the app is live.
@@ -20,12 +20,9 @@ Rails.application.routes.draw do
   get "diagnoses/question1"
   get "diagnoses/question2"
   get "diagnoses/question3"
-  
-  # 追加(診断結果を GET でも表示できるようにする)
-  get "diagnoses/result", to: "diagnoses#result"
-
-  # 追加(診断結果を POST で送信し、DB に保存する)
-  post "diagnoses/result", to: "diagnoses#result"
-  resources :diagnoses
+  get "diagnoses/result"
+  post "diagnoses/result"
+  get "diagnoses/index"
+  get 'diagnoses' => 'diagnoses#index'
 end
 

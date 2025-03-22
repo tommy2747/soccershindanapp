@@ -14,11 +14,13 @@
     <header>
       <h1>サッカー情報＆相性チーム診断サイト</h1>
       <div class="header-list">
-      <ul>
-        <li><%= link_to "ホーム", root_path %></li>
-        <li><%= link_to "新規投稿",new_tweet_path %></li>
-        <li><%= link_to "診断する",diagnoses_path %></li>
-      </ul>
+      <nav class="nav-menu">
+                <ul>
+                    <li><%= link_to "ログイン", tweets_path %></li>
+                    <li><%= link_to "新規登録", new_user_registration_path %></li>
+                    <li><%= link_to "診断する", diagnoses_path %></li>
+                </ul>
+                </nav>
       </div>
     </header>
     <main>

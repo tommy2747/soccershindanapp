@@ -1,23 +1,43 @@
-<% if params[:answer] == "C" %>
-    <h1>Cを選んだあなた</h1>
-    <h2>最終質問</h2>
-    <a href="/diagnoses/result?answer=あ">オススメ１結果を見る</a>
-    <a href="/diagnoses/result?answer=い">オススメ２結果を見る</a>
+<%= stylesheet_link_tag 'diagnoses', media: "all" %>
+<div class="questionback">
+    <div class="overlay-content"><% if params[:answer] == "C" %>
+    <h1>歴史的文化を選んだあなた</h1>
+    <h2>あなたのライフスタイルは？</h2>
+    <div class=question>
+        <a href="/diagnoses/result?answer=あ">アウトドア派</a>
+    </div>
+    <div class=question>
+        <a href="/diagnoses/result?answer=い">インドア派</a>
+    </div>
 <% elsif params[:answer] == "D" %>
-    <h1>Dを選んだあなた</h1>
-    <h2>最終質問</h2>
-    <a href="/diagnoses/result?answer=う">オススメ３結果を見る</a>
-    <a href="/diagnoses/result?answer=え">オススメ４結果を見る</a>
+    <h1>歴史的文化を選んだあなた</h1>
+    <h2>ああなたのライフスタイルは？</h2>
+    <div class=question>
+        <a href="/diagnoses/result?answer=う">アウトドア派</a>
+    </div>
+    <div class=question>
+        <a href="/diagnoses/result?answer=え">インドア派</a>
+    </div>
 <% elsif params[:answer] == "E" %>
-    <h1>Eを選んだあなた</h1>
-    <h2>最終質問</h2>
-    <a href="/diagnoses/result?answer=お">オススメ５結果を見る</a>
-    <a href="/diagnoses/result?answer=か">オススメ６結果を見る</a>
+    <h1>近代的文化を選んだあなた</h1>
+    <h2>ああなたのライフスタイルは？</h2>
+    <div class=question>
+        <a href="/diagnoses/result?answer=お">アウトドア派</a>
+    </div>
+    <div class=question>
+        <a href="/diagnoses/result?answer=か">インドア派</a>
+    </div>
 <% elsif params[:answer] == "F" %>
-    <h1>Fを選んだあなた</h1>
-    <h2>最終質問</h2>
-    <a href="/diagnoses/result?answer=き">オススメ７結果を見る</a>
-    <a href="/diagnoses/result?answer=く">オススメ８結果を見る</a>
+    <h1>近代的文化を選んだあなた</h1>
+    <h2>ああなたのライフスタイルは？</h2>
+    <div class=question>
+        <a href="/diagnoses/result?answer=き">アウトドア派</a>
+    </div>
+    <div class=question>
+        <a href="/diagnoses/result?answer=く">インドア派</a>
+    </div>
 <% end %>
+    </div>
+</div>
 
 

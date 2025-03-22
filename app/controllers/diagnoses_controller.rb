@@ -1,5 +1,6 @@
 class DiagnosesController < ApplicationController
-  def index
+
+  def question1
   end
   def result
     @diagnosis = Diagnosis.find_by(result_key: params[:answer])
